@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>AETHER — A DeFi World You Travel Through</title>
+    <meta name="description" content="AETHER is a decentralized finance protocol reimagined as a surreal, living world. Don't read a dashboard. Travel through it." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=Space+Grotesk:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/src/style.css" />
+  </head>
+  <body>
+    <!-- The living world renders here, fixed behind everything -->
+    <canvas id="world"></canvas>
+
+    <!-- Boot / loading veil -->
+    <div id="loader" class="loader">
+      <div class="loader__mark">AETHER</div>
+      <div class="loader__bar"><span id="loader-fill"></span></div>
+      <div class="loader__hint">entering the world…</div>
+    </div>
+
+    <!-- Fixed UI chrome -->
+    <header class="chrome">
+      <div class="chrome__logo">◈ AETHER</div>
+      <nav class="chrome__nav">
+        <span data-go="0">Midnight</span>
+        <span data-go="1">Valley</span>
+        <span data-go="2">Ascent</span>
+        <span data-go="3">Daybreak</span>
+      </nav>
+      <button class="chrome__cta">Enter Protocol</button>
+    </header>
+
+    <!-- Scroll progress as a "depth gauge" -->
+    <div class="depth">
+      <div class="depth__track"><span id="depth-fill"></span></div>
+      <div class="depth__label">DEPTH</div>
+    </div>
+
+    <!-- Time-of-day HUD — the journey runs from midnight to first light -->
+    <div class="clock">
+      <span class="clock__icon" id="clock-icon">☾</span>
+      <span class="clock__time" id="clock-time">23:48</span>
+      <span class="clock__phase" id="clock-phase">Moonrise</span>
+    </div>
+
+    <!-- Narrative overlay — each panel is a station on the journey -->
+    <main id="scroll">
+      <section class="panel" data-panel="0">
+        <div class="panel__inner panel__center">
+          <p class="eyebrow">Decentralized finance, reimagined</p>
+          <h1 class="display">
+            <span>FROM</span>
+            <span>MIDNIGHT</span>
+            <span class="display--accent">TO FIRST LIGHT.</span>
+          </h1>
+          <p class="lede">
+            AETHER turns your portfolio into a place. Begin under a setting moon and
+            travel a living world that brightens with every scroll — until the sun
+            rises over the protocol itself.
+          </p>
+          <div class="scroll-cue"><span></span>scroll to chase the dawn</div>
+        </div>
+      </section>
+
+      <section class="panel" data-panel="1">
+        <div class="panel__inner panel__left">
+          <p class="eyebrow">01 — Midnight · The Valley of Liquidity</p>
+          <h2 class="headline">Pools that<br />breathe.</h2>
+          <p class="body">
+            By moonlight, liquidity is a glowing river threading the valley floor —
+            rising and falling with every swap, alive with the creatures that drift
+            above its current.
+          </p>
+          <ul class="stats">
+            <li><b>$4.2B</b><span>Total value locked</span></li>
+            <li><b>0.04%</b><span>Avg. slippage</span></li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="panel" data-panel="2">
+        <div class="panel__inner panel__right">
+          <p class="eyebrow">02 — Pre-dawn · The Ascent of Yield</p>
+          <h2 class="headline">Climb<br />toward the light.</h2>
+          <p class="body">
+            As the first warmth touches the peaks, staking becomes a mountain you
+            ascend. The higher you go, the brighter the reward — auto-compounding vaults
+            carry you upward while you simply… travel.
+          </p>
+          <ul class="stats">
+            <li><b>18.6%</b><span>Base APY</span></li>
+            <li><b>0 gas</b><span>On compound</span></li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="panel" data-panel="3">
+        <div class="panel__inner panel__center">
+          <p class="eyebrow">03 — Daybreak · Above the Clouds</p>
+          <h2 class="headline">Where the<br />sun returns.</h2>
+          <p class="body">
+            Break through the cloud line and the horizon ignites. Governance, bridges
+            and a thousand chains drift below like a waking landscape — this is where
+            you decide what the new day becomes.
+          </p>
+        </div>
+      </section>
+
+      <section class="panel" data-panel="4">
+        <div class="panel__inner panel__center">
+          <h2 class="finale">Begin at<br />first light.</h2>
+          <p class="body body--center">
+            The dashboard was never the point. The sunrise was.
+          </p>
+          <div class="finale__actions">
+            <button class="chrome__cta chrome__cta--big">Enter Protocol</button>
+            <a class="ghost" href="#" data-go="0">↑ Return to origin</a>
+          </div>
+          <footer class="foot">AETHER · a fantasy you can interact with · 2026</footer>
+        </div>
+      </section>
+    </main>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
