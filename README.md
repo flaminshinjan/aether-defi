@@ -135,6 +135,27 @@ AETHER was generated from a single, structured prompt. You can reuse it to build
 
 ---
 
+## 🧰 Skill library — reusable immersive-design recipes
+
+This repo ships **29 [Claude Code skills](https://docs.claude.com/en/docs/claude-code/skills)** in [`.claude/skills/`](.claude/skills/) — each a focused, copy-pasteable recipe extracted from this build. When working in this project with Claude Code, just describe what you want ("add a glowing river", "make the camera follow scroll", "huge headline that won't clip") and the matching skill is pulled in automatically. They're also great reading on their own.
+
+**Orchestrator**
+- `immersive-landing-page` — the full playbook: routes to every skill below in build order
+
+**Scene & rendering**
+- `webgl-scene-setup` · `bloom-postprocessing` · `day-night-cycle` · `atmospheric-fog-depth` · `cinematic-color-grading` · `webgl-performance` · `responsive-webgl`
+
+**Procedural worlds**
+- `procedural-terrain` · `gradient-sky-shader` · `flowing-water-shader` · `floating-islands` · `particle-systems` · `volumetric-clouds` · `low-poly-stylization`
+
+**Life, camera & interaction**
+- `animated-creatures` · `flocking-boids` · `idle-ambient-motion` · `scroll-camera-journey` · `smooth-camera-easing` · `mouse-parallax` · `scroll-narrative-panels`
+
+**Typography, UI & polish**
+- `oversized-typography` · `environmental-storytelling` · `immersive-hud` · `blend-mode-chrome` · `loader-reveal` · `section-as-experience` · `accessibility-immersive`
+
+Each skill follows the same shape: **when to use it → the technique → a real code pattern → pitfalls**.
+
 ## 📄 License
 
 MIT — do anything, just don't blame us if you get lost in the world.
